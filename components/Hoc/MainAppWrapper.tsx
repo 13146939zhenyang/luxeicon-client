@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { staggerContainer } from "../../utils/motion";
 
-const BlockWrapper = (Component: any, idName: any) =>
+const MainAppWrapper = (Component: any, idName: any) =>
 	function HOC(props: any) {
 		return (
 			<motion.section
 				variants={staggerContainer()}
 				initial='hidden'
 				whileInView='show'
-				viewport={{ once: false, amount: 0.25 }}
-				className="w-full lg:px-40 px-5"
+				viewport={{ once: true, amount: 0.25 }}
+				className="lg:w-[1200px] w-full mx-auto"
 			>
 				{idName && <span id={idName}>
 				</span>}
@@ -18,4 +18,4 @@ const BlockWrapper = (Component: any, idName: any) =>
 		);
 	};
 
-export default BlockWrapper;
+export default MainAppWrapper;

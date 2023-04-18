@@ -1,9 +1,10 @@
 import React from 'react'
+import { BlockWrapper } from '../Hoc'
 
 const TopNavbar = () => {
-  return (
-	<div>TopNavbar</div>
-  )
+	return (
+		<div className='w-full bg-white lg:block hidden'>nav</div>
+	)
 }
 
-export default TopNavbar
+export default BlockWrapper(TopNavbar, '')

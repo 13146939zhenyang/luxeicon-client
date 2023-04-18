@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import { LuxuryWatch } from '@/public'
+import Image from 'next/image'
+
 export default function Home() {
 	return (
 		<>
@@ -8,7 +11,23 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/icon.svg" />
 			</Head>
-			<main className='w-full bg-yellow-300'>LuxIcon</main>
+			<main className='w-full'>
+				{/* add top padding */}
+				<div className='w-full h-[100vh] relative'>
+					<div className='w-full h-full bg-black bg-opacity-[0.4] absolute top-0 left-0 z-20'></div>
+					<Image src={LuxuryWatch.src} 
+					alt="luxicon-home" 
+					fill 
+					quality={100} 
+					style={{objectFit: 'cover', objectPosition: '10% 30%'}} 
+					blurDataURL='logo' 
+					className='z-10'
+					/>
+				</div>
+				<div className='w-full h-[100vh]'>section2</div>
+				<div className='w-full h-[100vh]'>section3</div>
+				<div className='w-full h-[100vh]'>section4</div>
+			</main>
 		</>
 	)
 }
