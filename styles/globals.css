@@ -6,3 +6,11 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'swiper/css/scrollbar';
+
+.background-linear-color {
+	background: rgb(80, 105, 87);
+	background: -moz-linear-gradient(90deg, rgb(51, 53, 52) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+	background: linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506957", endColorstr="#c5d0cb", GradientType=1);
+}

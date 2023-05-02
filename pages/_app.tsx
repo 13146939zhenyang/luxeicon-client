@@ -4,11 +4,18 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Layout } from "antd";
 import { Loading, TopNavbar } from '../components'
+import { Montserrat } from 'next/font/google'
+const montserrat = Montserrat({
+	weight: ["400", '500', '600', '700', '800', '900'],
+	style: ['normal', 'italic'],
+	subsets: ['latin'],
+})
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const { Content } = Layout;
 	const [loading, setLoading] = useState(false);
+
 	// router changing adding loading page
 	useEffect(() => {
 		const handleStart = () => {
@@ -32,9 +39,8 @@ export default function App({ Component, pageProps }: AppProps) {
 		};
 	}, [router]);
 	return (
-		// <Layout className='bg-gradient-to-r from-indigo-500 to-blue-300 bg-opacity-50 backdrop-filter backdrop-blur-lg w-full h-[100vh] p-0 relative'>
-		<Layout className='w-full h-[100vh] p-0 relative'>
-			<div className='absolute top-0 left-0 w-full bg-black bg-opacity-5 z-30'>
+		<Layout className={`w-full h-[100vh] p-0 relative ${montserrat.className}`}>
+			<div className={`absolute top-0 left-0 w-full z-30`}>
 				<TopNavbar />
 			</div>
 			<Content className="w-full h-[100vh] overflow-scroll">
