@@ -9,32 +9,44 @@ export const topNavLinks = [
   {
     title: "GALLERY",
     path: "/gallery",
+    value: 'gallery'
   },
   {
     title: "BUY",
     path: "/buy",
+    value: 'buy'
   },
   {
     title: "SELL",
     path: "/sell",
+    value: 'sell'
   },
   {
     title: "EXCHANGE",
     path: "/exchange",
+    value: 'exchange'
   },
-  {
-    title: "ABOUT",
-    path: "/about",
-  },
+];
+
+export const topNavRightLinks = [
   {
     title: "CONTACT",
     path: "/contact",
+    value: 'contact'
   },
   {
-    title: "Enquire",
+    title: "ENQUIRE",
     path: "/enquire",
+    value: 'enquire'
   },
+  {
+    title: "LOGIN",
+    path: "/login",
+    value: 'login'
+  }
+
 ];
+
 export const shareLinks = [
   {
     title: "Facebook",

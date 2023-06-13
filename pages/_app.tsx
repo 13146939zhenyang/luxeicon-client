@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const { Content } = Layout;
 	const [loading, setLoading] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
 
 	// router changing adding loading page
 	useEffect(() => {
@@ -39,14 +40,9 @@ export default function App({ Component, pageProps }: AppProps) {
 		};
 	}, [router]);
 	return (
-		<Layout className={`w-full h-[100vh] p-0 relative ${montserrat.className}`}>
-			<div className={`absolute top-0 left-0 w-full z-30`}>
-				<TopNavbar />
-			</div>
-			<Content className="w-full h-[100vh] overflow-scroll">
-				{loading && <Loading />}
-				<Component {...pageProps} />
-			</Content>
-		</Layout>
+		<main className={`${montserrat.className} relative`}>
+			<TopNavbar scrolled={scrolled} />
+			{loading ? <Loading /> : <Component {...pageProps} setScrolled={setScrolled} />}
+		</main>
 	)
 }
