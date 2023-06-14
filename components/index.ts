@@ -5,6 +5,11 @@ import TopNavbar from "./Navbar/TopNavbar";
 import TopNavItem from "./Navbar/TopNavItem";
 import HomeSection from "./Home/HomeSection";
 
+import BrandCard from './Card/BrandCard';
+import CategoryCard from "./Card/CategoryCard";
+import HotListCard from "./Card/HotListCard";
+import RecommendationCard from "./Card/RecommendationCard";
+
 export {
   // Loading
   CanvasLoader,
@@ -15,4 +20,9 @@ export {
   TopNavItem,
   //   Home
   HomeSection,
+
+  BrandCard,
+  CategoryCard,
+  HotListCard,
+  RecommendationCard,
 };

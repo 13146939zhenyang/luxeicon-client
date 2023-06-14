@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		};
 	}, [router]);
 	return (
-		<main className={`${montserrat.className} relative`}>
+		<main className={`${montserrat.className} relative bg-[#F5F5F5]`}>
 			<TopNavbar scrolled={scrolled} />
 			{loading ? <Loading /> : <Component {...pageProps} setScrolled={setScrolled} />}
 		</main>

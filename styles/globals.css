@@ -14,3 +14,24 @@
 	background: linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506957", endColorstr="#c5d0cb", GradientType=1);
 }
+.main-color {
+	color: #506957;
+}
+.primary-color {
+	color: #c5d0cb;
+}
+.sub-title-color {
+	color: #CBD78D;
+}
+.title-color {
+	color: #C5AA74;
+}
+.icon-color {
+	color: #A49462;
+}
+.button-color {
+	background-color: #A9905C;
+}
+.etc-color {
+	color: #A6A78D;
+}

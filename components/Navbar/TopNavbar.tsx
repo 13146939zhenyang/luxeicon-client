@@ -50,7 +50,7 @@ const TopNavbar = ({ scrolled }: { scrolled: boolean }) => {
 					}
 				</div>
 				<div className='w-full h-full absolute top-0 left-0 flex justify-center items-center z-10'>
-					<img src={LuxeiconLogo.src} alt="luxeicon-logo" className='drop-shadow-lg h-[40px] w-auto cursor-pointer' onClick={() => router.push('/', undefined, { shallow: true })} />
+					<img src={LuxeiconLogo.src} alt="luxeicon-logo" className='drop-shadow-lg h-[40px] w-auto cursor-pointer' onClick={() => { router.push('/', undefined, { shallow: true }); setActive('') }} />
 				</div>
 			</div>
 		</div>

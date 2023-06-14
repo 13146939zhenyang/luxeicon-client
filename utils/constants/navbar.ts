@@ -7,11 +7,6 @@ import {
 } from "@ant-design/icons";
 export const topNavLinks = [
   {
-    title: "GALLERY",
-    path: "/gallery",
-    value: 'gallery'
-  },
-  {
     title: "BUY",
     path: "/buy",
     value: 'buy'

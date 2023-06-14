@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import Head from 'next/head'
-import { HomeSection } from '@/components/'
+import { HomeSection, BrandCard, CategoryCard, HotListCard, RecommendationCard } from '@/components'
+import { brands, categories, recommendation } from '@/utils/constants'
 
 export default function Home({ setScrolled }: any) {
 	const ref = useRef<HTMLDivElement>(null)
@@ -33,9 +34,50 @@ export default function Home({ setScrolled }: any) {
 			<main className='w-full h-[100vh] z-0 relative'>
 				<div className='absolute w-full h-full top-0 left-0 z-40 overflow-scroll home-wrapper' ref={ref}>
 					<HomeSection />
-					<div className='w-full h-[100vh]'>section2</div>
-					<div className='w-full h-[100vh]'>section3</div>
-					<div className='w-full h-[100vh]'>section4</div>
+					<div className='w-full'>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
+							<span className='text-xl main-color font-bold drop-shadow-lg'>Categories</span>
+							<div className='w-full flex flex-row justify-between flex-wrap gap-y-8'>
+								{categories.map((item, index) => (
+									<CategoryCard key={index} {...item} />
+								))}
+							</div>
+						</div>
+					</div>
+					<div className='w-full'>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
+							<span className='text-xl main-color font-bold drop-shadow-lg'>Recommendation</span>
+							<div className='w-full flex flex-row justify-between flex-wrap gap-y-8'>
+								{recommendation.map((item, index) => (
+									<RecommendationCard key={index} {...item} />
+								))}
+							</div>
+						</div>
+					</div>
+					<div className='w-full'>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
+							<span className='text-xl main-color font-bold drop-shadow-lg'>Brands</span>
+							<div className='w-full flex flex-row justify-between'>
+								{
+									brands.map((item, index) => (
+										<BrandCard key={index} {...item} />
+									))
+								}
+							</div>
+						</div>
+					</div>
+					<div className='w-full'>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
+							<span className='text-xl main-color font-bold drop-shadow-lg'>Hot List</span>
+							<div className='w-full flex flex-row justify-between'>
+								{
+									brands.map((item, index) => (
+										<HotListCard key={index} {...item} />
+									))
+								}
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 		</>
