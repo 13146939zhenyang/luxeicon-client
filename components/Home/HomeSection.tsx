@@ -31,7 +31,7 @@ const HomeSection = () => {
 	}, [])
 
 	return (
-		<div className={`w-full relative transition duration-500 ease-in-out background-linear-color flex items-center py-40 shadow-2xl`}>
+		<div className={`w-full h-auto relative transition duration-500 ease-in-out background-linear-color flex items-center py-40`}>
 			<div className='max-w-7xl mx-auto w-full h-full'>
 				<div className='w-full flex sm:flex-row sm:justify-between pl-10 flex-col justify-center flex-wrap-reverse'>
 					<motion.div
@@ -60,8 +60,8 @@ const HomeSection = () => {
 						className='text-white flex flex-col justify-center gap-10 max-w-xl'
 					>
 						<div className='flex flex-col gap-4'>
-							<div className='sub-title-color text-2xl'>subtitle subtitle</div>
-							<div className='main-title-color text-5xl font-semibold tracking-wider'>TitleTitle</div>
+							<div className='sub-title-color text-2xl'>ROLEX</div>
+							<div className='main-title-color text-5xl font-semibold tracking-wider'>ROLEX ROLEX</div>
 							<div className='break-all'>
 								{limitDescription(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`)}
 							</div>
@@ -72,7 +72,7 @@ const HomeSection = () => {
 						</div>
 						<div className='w-full flex flex-row gap-4'>
 							<span>Share</span>
-							<div className='flex flex-row gap-2 items-center'>
+							<div className='flex flex-row gap-4 items-center'>
 								{
 									shareLinks.map((link, index) => (
 										<link.icon key={index} className='icon-color hover:text-white transition duration-300 ease-in-out cursor-pointer' />

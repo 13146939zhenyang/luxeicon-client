@@ -10,6 +10,8 @@ import CategoryCard from "./Card/CategoryCard";
 import HotListCard from "./Card/HotListCard";
 import RecommendationCard from "./Card/RecommendationCard";
 
+import Footer from './Footer/Footer'
+
 export {
   // Loading
   CanvasLoader,
@@ -25,4 +27,7 @@ export {
   CategoryCard,
   HotListCard,
   RecommendationCard,
+
+  Footer,
+  
 };

@@ -13,7 +13,6 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
-	const { Content } = Layout;
 	const [loading, setLoading] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 

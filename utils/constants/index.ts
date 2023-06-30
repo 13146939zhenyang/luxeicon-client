@@ -1,107 +1,251 @@
+import { RolexBg, TudorBg, PatekPhilippeBg, AudemarsPiguetBg, RichardMilleBg, CartierBg, OmegaBg, BreitlingBg, IWCBg, HublotBg, PaneraiBg, JaegerLecoultreBg, TagHeuerBg, ZenithBg, BvlgariBg } from "@/public"
 export const brands = [
     {
         name: 'Rolex',
-        path: '/brands/rolex',
-        value: 'rolex'
+        slug: 'rolex',
+        image: RolexBg
     },
     {
         name: 'Patek Philippe',
-        path: '/brands/patek-philippe',
-        value: 'patek-philippe'
+        slug: 'patek-philippe',
+        image: PatekPhilippeBg
     },
     {
         name: 'Audemars Piguet',
-        path: '/brands/audemars-piguet',
-        value: 'audemars-piguet'
+        slug: 'audemars-piguet',
+        image: AudemarsPiguetBg
     },
     {
         name: 'Richard Mille',
-        path: '/brands/richard-mille',
-        value: 'richard-mille'
+        slug: 'richard-mille',
+        image: RichardMilleBg
     },
     {
         name: 'Cartier',
-        path: '/brands/cartier',
-        value: 'cartier'
+        slug: 'cartier',
+        image: CartierBg
     },
     {
         name: 'Omega',
-        path: '/brands/omega',
-        value: 'omega'
+        slug: 'omega',
+        image: OmegaBg
     },
     {
         name: 'Breitling',
-        path: '/brands/breitling',
-        value: 'breitling'
+        slug: 'breitling',
+        image: BreitlingBg
     },
     {
         name: 'IWC',
-        path: '/brands/iwc',
-        value: 'iwc'
+        slug: 'iwc',
+        image: IWCBg
+    },
+    {
+        name: 'Hublot',
+        slug: 'hublot',
+        image: HublotBg
+    },
+    {
+        name: 'Panerai',
+        slug: 'panerai',
+        image: PaneraiBg
+    },
+    {
+        name: 'Jaeger-LeCoultre',
+        slug: 'jaeger-lecoultre',
+        image: JaegerLecoultreBg
+    },
+    {
+        name: 'Tag Heuer',
+        slug: 'tag-heuer',
+        image: TagHeuerBg
+    },
+    {
+        name: 'Zenith',
+        slug: 'zenith',
+        image: ZenithBg
+    },
+    {
+        name: 'Bvlgari',
+        slug: 'bvlgari',
+        image: BvlgariBg
+    },
+    {
+        name: 'Tudor',
+        slug: 'tudor',
+        image: TudorBg
     },
 ]
 export const categories = [
     {
         name: 'Vintage',
-        path: '/categories/vintage',
-        value: 'vintage'
+        slug: 'vintage'
     },
     {
         name: 'Limited Edition',
-        path: '/categories/limited-edition',
-        value: 'limited-edition'
+        slug: 'limited-edition'
     },
     {
         name: 'Diamond Watches',
-        path: '/categories/diamond-watches',
-        value: 'diamond-watches'
+        slug: 'diamond-watches'
     },
     {
         name: 'Automatic Watches',
-        path: '/categories/automatic-watches',
-        value: 'automatic-watches'
+        slug: 'automatic-watches'
     },
     {
         name: 'Discontinued Watches',
-        path: '/categories/discontinued-watches',
-        value: 'discontinued-watches'
+        slug: 'discontinued-watches'
     },
     {
         name: `Manufacturer's Warranty`,
-        path: '/categories/manufacturers-warranty',
-        value: 'manufacturers-warranty'
+        slug: 'manufacturers-warranty'
     }
 ]
 
 export const recommendation = [
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
     {
         name: 'Rolex w1',
-        path: '/brands/rolex/w1',
-        value: 'rolex-w1'
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
+    },
+    {
+        name: 'Rolex w1',
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
+    },
+    {
+        name: 'Rolex w1',
+        slug: 'rolex-w1',
+        description: `
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.`,
+        brand: 'Rolex',
+        location: 'NSW',
+        delivery: 'AU POST',
+        status: 'Brand New',
+        likes: '100',
+        updatedAt: '2023-01-01'
     },
 ]

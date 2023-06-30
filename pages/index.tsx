@@ -1,7 +1,9 @@
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head'
-import { HomeSection, BrandCard, CategoryCard, HotListCard, RecommendationCard } from '@/components'
+import Link from 'next/link'
+import { HomeSection, BrandCard, CategoryCard, HotListCard, RecommendationCard, Footer } from '@/components'
 import { brands, categories, recommendation } from '@/utils/constants'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 export default function Home({ setScrolled }: any) {
 	const ref = useRef<HTMLDivElement>(null)
@@ -23,6 +25,15 @@ export default function Home({ setScrolled }: any) {
 			ref.current?.removeEventListener('scroll', handleElementScroll)
 		}
 	}, [])
+	const [keyword, setKeyword] = useState<string>('');
+	const filterBrand = brands.filter((item) => {
+		if (keyword.trim() === '') {
+			return true; // Show all items when keyword is empty
+		}
+
+		const sectionMatch = item.slug.toLowerCase().includes(keyword.toLowerCase());
+		return sectionMatch;
+	});
 	return (
 		<>
 			<Head>
@@ -35,8 +46,32 @@ export default function Home({ setScrolled }: any) {
 				<div className='absolute w-full h-full top-0 left-0 z-40 overflow-scroll home-wrapper' ref={ref}>
 					<HomeSection />
 					<div className='w-full'>
-						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
-							<span className='text-xl main-color font-bold drop-shadow-lg'>Categories</span>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-10'>
+							<div className='w-full flex flex-row justify-between items-end'>
+								<div className='flex flex-row gap-2'>
+									<span className='cursor-pointer text-2xl w-full main-color font-bold drop-shadow-lg'>Brands</span>
+									{/* <span className='text-sm main-color font-semibold drop-shadow-lg'>you can find 20+ brands in here</span> */}
+								</div>
+								<div className='flex flex-row gap-2 items-center h-full'>
+									<AiOutlineSearch className='drop-shadow-lg text-lg' />
+									<input type="text" placeholder='search brands...' className='bg-white px-4 py-1 font-normal text-base drop-shadow-lg focus:outline-none shadow-lg' onChange={(e) => setKeyword(e.target.value)} />
+								</div>
+							</div>
+							<div className='w-full flex flex-row flex-wrap gap-5 gap-y-10'>
+								{filterBrand.length === 0 ? <div>Current no <span className='font-bold'>{keyword}</span>, you can submit a <Link href='/enquire' className='text-blue-500 underline'>enquire</Link> for this brand!</div> :
+									filterBrand.map((item, index) => (
+										<BrandCard key={index} {...item} />
+									))
+								}
+							</div>
+						</div>
+					</div>
+					<div className='w-full bg-white'>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-10'>
+							<div className='w-full flex flex-row justify-between items-end'>
+								<span className='cursor-pointer text-2xl w-full main-color font-bold drop-shadow-lg'>Categories</span>
+								<span className='text-sm primary-color font-bold drop-shadow-lg cursor-pointer hover:text-[#506957] transition-all duration-75 ease-in-out w-[70px]'>View All</span>
+							</div>
 							<div className='w-full flex flex-row justify-between flex-wrap gap-y-8'>
 								{categories.map((item, index) => (
 									<CategoryCard key={index} {...item} />
@@ -45,38 +80,20 @@ export default function Home({ setScrolled }: any) {
 						</div>
 					</div>
 					<div className='w-full'>
-						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
-							<span className='text-xl main-color font-bold drop-shadow-lg'>Recommendation</span>
+						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-10'>
+							<div className='w-full flex flex-row justify-between items-end'>
+								<span className='cursor-pointer text-2xl w-full main-color font-bold drop-shadow-lg'>Trading History</span>
+								<span className='text-sm primary-color font-bold drop-shadow-lg cursor-pointer hover:text-[#506957] transition-all duration-75 ease-in-out w-[70px]'>View All</span>
+							</div>
 							<div className='w-full flex flex-row justify-between flex-wrap gap-y-8'>
 								{recommendation.map((item, index) => (
-									<RecommendationCard key={index} {...item} />
+									<RecommendationCard key={index} {...item} index={index} />
 								))}
 							</div>
 						</div>
 					</div>
-					<div className='w-full'>
-						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
-							<span className='text-xl main-color font-bold drop-shadow-lg'>Brands</span>
-							<div className='w-full flex flex-row justify-between'>
-								{
-									brands.map((item, index) => (
-										<BrandCard key={index} {...item} />
-									))
-								}
-							</div>
-						</div>
-					</div>
-					<div className='w-full'>
-						<div className='max-w-7xl mx-auto py-10 flex flex-col gap-4'>
-							<span className='text-xl main-color font-bold drop-shadow-lg'>Hot List</span>
-							<div className='w-full flex flex-row justify-between'>
-								{
-									brands.map((item, index) => (
-										<HotListCard key={index} {...item} />
-									))
-								}
-							</div>
-						</div>
+					<div className='w-full bg-[#363636]'>
+						<Footer />
 					</div>
 				</div>
 			</main>

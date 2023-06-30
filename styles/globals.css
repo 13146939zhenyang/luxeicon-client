@@ -8,30 +8,48 @@
 @import 'swiper/css/scrollbar';
 
 .background-linear-color {
-	background: rgb(80, 105, 87);
-	background: -moz-linear-gradient(90deg, rgb(51, 53, 52) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
-	background: -webkit-linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
-	background: linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506957", endColorstr="#c5d0cb", GradientType=1);
+    background: rgb(80, 105, 87);
+    background: -moz-linear-gradient(90deg, rgb(51, 53, 52) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+    background: linear-gradient(90deg, rgba(80, 105, 87, 1) 0%, rgba(118, 140, 123, 1) 56%, rgba(197, 208, 203, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506957", endColorstr="#c5d0cb", GradientType=1);
 }
+
 .main-color {
-	color: #506957;
+    color: #506957;
 }
+
 .primary-color {
-	color: #c5d0cb;
+    color: #c5d0cb;
 }
+
 .sub-title-color {
-	color: #CBD78D;
+    color: #CBD78D;
 }
+
 .title-color {
-	color: #C5AA74;
+    color: #C5AA74;
 }
+
 .icon-color {
-	color: #A49462;
+    color: #A49462;
 }
+
 .button-color {
-	background-color: #A9905C;
+    background-color: #A9905C;
 }
+
 .etc-color {
-	color: #A6A78D;
+    color: #A6A78D;
+}
+
+.inner-card {
+    box-shadow: inset 1.5px 0.3px 7px -2px rgba(0, 0, 0, 0.3);
+}
+
+.ant-collapse-large>.ant-collapse-item>.ant-collapse-header {
+    padding: 10px 0;
+}
+.ant-collapse-large >.ant-collapse-item >.ant-collapse-content>.ant-collapse-content-box {
+    padding: 0;
 }

@@ -17,17 +17,18 @@ export const topNavLinks = [
     value: 'sell'
   },
   {
-    title: "EXCHANGE",
-    path: "/exchange",
-    value: 'exchange'
+    title: "CONTACT",
+    path: "/contact",
+    value: 'contact'
   },
 ];
 
 export const topNavRightLinks = [
+
   {
-    title: "CONTACT",
-    path: "/contact",
-    value: 'contact'
+    title: "EXCHANGE",
+    path: "/exchange",
+    value: 'exchange'
   },
   {
     title: "ENQUIRE",
