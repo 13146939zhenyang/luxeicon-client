@@ -27,11 +27,11 @@ const Brand: FC<Props> = ({ scrolled, setScrolled, brand }) => {
                 }
             }
         }
-
-        ref.current?.addEventListener('scroll', handleElementScroll)
+        const currentScreen = ref.current;
+        currentScreen?.addEventListener('scroll', handleElementScroll)
 
         return () => {
-            ref.current?.removeEventListener('scroll', handleElementScroll)
+            currentScreen?.removeEventListener('scroll', handleElementScroll)
         }
     }, [])
     const [open, setOpen] = useState(false);
