@@ -144,7 +144,7 @@ const Brand: FC<Props> = ({ scrolled, setScrolled, brand }) => {
                                             </div>
                                             <div className='capitalize flex flex-row gap-1 items-center'>
                                                 <span className='font-bold capitalize'>gender: </span>
-                                                <span className='capitalize'>{item.gender}'s</span>
+                                                <span className='capitalize'>{item.gender}&apos;s</span>
                                             </div>
                                         </div>
                                         <div className='capitalize text-xs'>
